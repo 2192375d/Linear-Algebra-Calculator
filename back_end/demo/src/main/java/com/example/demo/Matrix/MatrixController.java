@@ -11,6 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class MatrixController {
     @GetMapping
     public List<Matrix> getMatrix(){
-        return List.of(new Matrix(2, 3));
-    } 
+        return List.of(new Matrix());
+    }
 }

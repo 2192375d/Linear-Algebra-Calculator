@@ -16,8 +16,13 @@ public class Matrix {
     public Matrix(int row, int col){
         this.row=row;
         this.col=col;
-
+    
         matrix=new int[row][col];
+        for(int r=0; r<row; r++){
+            for(int c=0; c<col; c++){
+                matrix[r][c]=-1;
+            }
+        }
     }
     
     //set the value of a specific entry of a matrix
@@ -38,5 +43,16 @@ public class Matrix {
             return;
         }
     }
-        
+
+    public int[][] getMatrix(){
+        return matrix;
+    }
+
+    public int getRow(){
+        return row;
+    }
+
+    public int getCol(){
+        return col;
+    }
 }
